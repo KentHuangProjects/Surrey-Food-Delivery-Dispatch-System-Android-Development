@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_current_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="t27.surreyfooddeliveryapp.CurrentOrderActivity">
+
+    <LinearLayout
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <!--logo-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.80"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--<ImageView-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:gravity="start"-->
+            <!--android:onClick="logo_click"-->
+            <!--android:scaleType="fitStart"-->
+            <!--app:srcCompat="@drawable/sfd_logo" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:text="Current Order"
+                android:textColor="@color/colorHeaderText"
+                android:textSize="@dimen/header_font_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_weight="0.20"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/profile_icon"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:onClick="profile_click"-->
+        <!--app:srcCompat="@drawable/guest_icon" />-->
+        <!--</LinearLayout>-->
+        <!--end logo-->
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/order_detail"
+        android:layout_width="match_parent"
+        android:layout_below="@id/headerView"
+        android:layout_height="match_parent">
+
+
+
+    </ListView>
+
+</RelativeLayout>

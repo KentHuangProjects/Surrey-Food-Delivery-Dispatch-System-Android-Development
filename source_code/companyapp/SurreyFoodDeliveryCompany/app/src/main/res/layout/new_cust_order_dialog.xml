@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/first_popup_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create new order:"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/first_popup_tv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--name-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_name_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Name*" />
+
+                    <EditText
+                        android:id="@+id/cust_order_name_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="name" />
+                </LinearLayout>
+                <!--end name-->
+
+                <!--phone #-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_phone_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Phone*" />
+
+                    <EditText
+                        android:id="@+id/cust_order_phone_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="###-###-####-EXT"
+                        android:inputType="phone" />
+                </LinearLayout>
+                <!--end phone #-->
+
+                <!--email-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_email_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Email" />
+
+                    <EditText
+                        android:id="@+id/cust_order_email_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="email (optional)"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <!--end email-->
+
+                <!--space in the middle-->
+                <View
+                    android:id="@+id/anchor2"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_centerInParent="true" />
+                <!--end   space in the middle-->
+
+                <!--address-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_address_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Address*" />
+
+                    <EditText
+                        android:id="@+id/cust_order_address_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="address"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <!--end address-->
+
+                <!--address detail-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/addressDetail_tv"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Address detail"
+                        android:textColor="@color/colorTitleText" />
+
+                    <EditText
+                        android:id="@+id/cust_order_address_detail_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="Apt, Suite, Buzz code, etc. (Optional)"
+                        android:inputType="textMultiLine" />
+                </LinearLayout>
+                <!--end address detail-->
+
+                <!--detail-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_detail_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Order Detail*" />
+
+                    <EditText
+                        android:id="@+id/cust_order_detail_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="top|left"
+                        android:hint="order detail.\n$12 delivery charge for 1 stop pick up, $20 for 2 stops."
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:maxLines="10"
+                        android:minHeight="100dp"
+                        android:minLines="4"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--end detail-->
+
+            <!--method of payment radio group-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preferred_payment_textview"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Preferred method of payment:" />
+
+                <RadioGroup
+                    android:id="@+id/preferred_payment_radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!--customer radio buttons-->
+                    <RadioButton
+                        android:id="@+id/cash_payment_radioButton"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Cash"
+                        android:textColor="@color/colorTitleText"
+                        android:textStyle="bold" />
+
+                    <!--restaurant radio buttons-->
+                    <RadioButton
+                        android:id="@+id/card_payment_radioButton"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Debit/Visa"
+                        android:textColor="@color/colorTitleText"
+                        android:textStyle="bold" />
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

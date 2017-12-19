@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="t27.surreyfooddeliveryapp.EditProfileActivity">
+
+    <!--header-->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:orientation="horizontal">
+
+        <!--logo-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="0.80"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--<ImageView-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:gravity="start"-->
+            <!--android:onClick="logo_click"-->
+            <!--android:scaleType="fitStart"-->
+            <!--app:srcCompat="@drawable/sfd_logo" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:text="Edit Profile"
+                android:textColor="@color/colorHeaderText"
+                android:textSize="@dimen/header_font_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--end logo-->
+
+        <!--profile icon-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_weight="0.20"-->
+        <!--android:orientation="horizontal">-->
+        <!--</LinearLayout>-->
+        <!--end profile icon-->
+    </LinearLayout>
+    <!--end header-->
+
+
+    <ScrollView
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <!-- Name -->
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:hint="name"
+                    android:inputType="textPersonName" />
+
+                <!-- Phone number -->
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/edit_name"
+                    android:layout_marginTop="10dp"
+                    android:text="Phone Number"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_number"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/number"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:hint="###-###-####-EXT"
+                    android:inputType="phone" />
+
+                <!-- Address -->
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/edit_number"
+                    android:layout_marginTop="10dp"
+                    android:text="Address"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_address"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/address"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:hint="address"
+                    android:inputType="text" />
+
+                <!-- Address detail -->
+                <TextView
+                    android:id="@+id/address_detail"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/edit_address"
+                    android:layout_marginTop="10dp"
+                    android:text="Address Detail"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_address_detail"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/address_detail"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:hint="apt, suite, buzz code, etc."
+                    android:inputType="text" />
+
+                <!-- Save Button -->
+                <Button
+                    android:id="@+id/save_btn"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/edit_address_detail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:onClick="save_edit_pro_click"
+                    android:text="Save"
+                    android:textColor="@color/colorButtonText"
+                    android:textStyle="bold" />
+
+                <!--            &lt;!&ndash; Password &ndash;&gt;
+                            <TextView
+                                android:id="@+id/password"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/edit_email"
+                                android:textStyle="bold"
+                                android:layout_marginTop="10dp"
+                                android:text="Password" />
+
+                            <EditText
+                                android:id="@+id/edit_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/password"
+                                android:background="@android:drawable/editbox_background"
+                                android:ems="10"
+                                android:inputType="textPassword" />
+
+                            &lt;!&ndash;new password&ndash;&gt;
+                            <TextView
+                                android:id="@+id/new_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:textStyle="bold"
+                                android:layout_below="@+id/edit_pass"
+                                android:layout_marginTop="10dp"
+                                android:text="New Password" />
+
+                            <EditText
+                                android:id="@+id/edit_new_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/new_pass"
+                                android:background="@android:drawable/editbox_background"
+                                android:ems="10"
+                                android:inputType="textPassword" />
+
+
+                            &lt;!&ndash;confirm new password&ndash;&gt;
+                            <TextView
+                                android:id="@+id/confirm_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/edit_new_pass"
+                                android:layout_marginTop="10dp"
+                                android:textStyle="bold"
+                                android:text="Confirm New Password" />
+
+                            <EditText
+                                android:id="@+id/edit_confirm_pass"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_below="@+id/confirm_pass"
+                                android:background="@android:drawable/editbox_background"
+                                android:ems="10"
+                                android:inputType="textPassword" />-->
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/inprogress_btn">
+
+    <TextView
+        android:id="@+id/inprogress_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:text="Orders In Progress"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/inprogress_title"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/back">
+
+        <ListView
+            android:id="@+id/inprogress_order_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SurreyFoodDeliveryApp</string>
+    <string name="service_description">We Deliver fast food or pick up the food from the restaurant of you choice. Restaurants included are McDonalds, Wendys , Burgerking , Nandos and more. Delivery available based upon requested store hours.</string>
+    <string name="delivery_charge_description">$12 minimum charge for one stop shop, $20 for two stop shops. \nTime - give us 40 minutes to deliver it to you.</string>
+    <string name="other_delivery_description">Medication , smokes - Laundry Pickup and drop off, other small Item delivery and pick up.</string>
+    <string name="login_failed">Invalid email or password</string>
+    <string name="register_failed">Fail to sign up</string>
+    <string name="error_weak_password">Password is Weak</string>
+    <string name="error_invalid_email">Invalid Email</string>
+    <string name="error_user_exists">User already exists</string>
+    <string name="register_succeed">Sign up successfully</string>
+    <string name="User_info">userInfo</string>
+    <string name="forget_pass_description">Enter your email ID below and a reset password email will be sent.</string>
+    <string name="customer_order_btn_text">Order Now</string>
+    <string name="resta_order_btn_text">Request Driver</string>
+
+    <string name="loading">Loading…</string>
+</resources>

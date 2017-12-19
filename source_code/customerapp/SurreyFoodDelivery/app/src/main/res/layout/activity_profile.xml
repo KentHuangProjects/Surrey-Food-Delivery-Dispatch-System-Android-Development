@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="t27.surreyfooddeliveryapp.ProfileActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/header"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <!--header-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.80"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/logo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:gravity="start"-->
+            <!--android:onClick="logo_click"-->
+            <!--android:scaleType="fitStart"-->
+            <!--app:srcCompat="@drawable/sfd_logo" />-->
+
+            <TextView
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:text="Profile"
+                android:textColor="@color/colorTitleText"
+                android:textSize="@dimen/header_font_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--profile icon-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_weight="0.20"-->
+        <!--android:orientation="horizontal">-->
+        <!--</LinearLayout>-->
+        <!--end profile icon-->
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/users" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_img"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Guest" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/name"
+                android:layout_below="@+id/name"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/address_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/current_order"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/profile_img"
+                android:layout_alignStart="@+id/profile_img"
+                android:layout_below="@+id/address_detail"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:onClick="current_order_click"
+                android:text="Current Order"
+                android:textColor="@color/colorButtonText"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/edit_profile"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/current_order"
+                android:layout_alignStart="@+id/current_order"
+                android:layout_below="@+id/current_order"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:enabled="false"
+                android:onClick="editProfile_click"
+                android:text="Edit Profile"
+                android:textColor="@color/colorButtonText"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/change_password"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/current_order"
+                android:layout_alignStart="@+id/current_order"
+                android:layout_below="@+id/edit_profile"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:enabled="false"
+                android:onClick="changePassword_click"
+                android:text="Change Password"
+                android:textColor="@color/colorButtonText"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/current_order"
+                android:layout_alignStart="@+id/current_order"
+                android:layout_below="@id/change_password"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="logout_click"
+                android:text="Logout"
+                android:textColor="@color/colorButtonText"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

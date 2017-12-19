@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/first_popup_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        android:paddingStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/first_popup_tv"
+        android:layout_marginTop="3dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--restaurant name-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_name_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Restaurant Name*" />
+
+                    <EditText
+                        android:id="@+id/restaurant_name_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="restaurant name"
+                        android:inputType="text" />
+                </LinearLayout>
+                <!--end resta name-->
+
+                <!--resta phone #-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_phone_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Restaurant Phone*" />
+
+                    <EditText
+                        android:id="@+id/restaurant_phone_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="###-###-####-EXT"
+                        android:inputType="phone" />
+                </LinearLayout>
+                <!--end resta phone #-->
+
+                <!--Resta email-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_email_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Restaurant Email" />
+
+                    <EditText
+                        android:id="@+id/restaurant_email_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="restaurant email"
+                        android:inputType="textEmailAddress" />
+                </LinearLayout>
+                <!--end email-->
+
+                <!--restaurant address(pickup location)-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_address_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Restaurant Address*" />
+
+                    <EditText
+                        android:id="@+id/restaurant_address_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="pick up location"
+                        android:inputType="text" />
+                </LinearLayout>
+                <!--end restaurant address(pickup location)-->
+
+                <!--space in the middle1-->
+                <View
+                    android:id="@+id/anchor1"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:layout_centerInParent="true" />
+                <!--end   space in the middle1-->
+
+                <!--estimated pickup time-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/restaurant_estimatedTime_start_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Ready in: " />
+
+                        <EditText
+                            android:id="@+id/restaurant_estimatedTime_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/editbox_background"
+                            android:gravity="start"
+                            android:inputType="number"
+                            android:text="15" />
+
+
+                        <TextView
+                            android:id="@+id/restaurant_estimatedTime_end_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="* minutes" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--end estimated pickup time-->
+
+                <!--total amount-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/restaurant_totalAmount_start_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="Total amount: " />
+
+                        <EditText
+                            android:id="@+id/restaurant_totalAmount_edittext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/editbox_background"
+                            android:gravity="start"
+                            android:inputType="numberDecimal" />
+
+                        <TextView
+                            android:id="@+id/restaurant_totalAmount_end_textview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:text="* dollars" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--end total amount-->
+
+                <!--customer name-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_custname_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Customer Name*" />
+
+                    <EditText
+                        android:id="@+id/restaurant_custname_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="customer name"
+                        android:inputType="text" />
+                </LinearLayout>
+                <!--end cust name-->
+
+                <!--customer phone-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_custphone_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Customer Phone*" />
+
+                    <EditText
+                        android:id="@+id/restaurant_custphone_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="###-###-####-EXT"
+                        android:inputType="phone" />
+                </LinearLayout>
+                <!--end cust phone-->
+
+                <!--customer location-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_custlocation_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Customer Address*" />
+
+                    <EditText
+                        android:id="@+id/restaurant_custlocation_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="drop off location"
+                        android:inputType="text" />
+                </LinearLayout>
+                <!--end cust location-->
+
+                <!--drop off location detail-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/restaurant_custlocation_detail_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Address detail"
+                        android:textColor="@color/colorTitleText" />
+
+                    <EditText
+                        android:id="@+id/restaurant_custlocation_detail_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="start"
+                        android:hint="Apt, Suite, Buzz code, etc. (Optional)"
+                        android:inputType="textMultiLine" />
+                </LinearLayout>
+                <!--end drop off location detail-->
+
+                <!--order detail-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:id="@+id/cust_order_detail_textview"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="Order Detail*" />
+
+                    <EditText
+                        android:id="@+id/cust_order_detail_edittext"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/editbox_background"
+                        android:gravity="top|left"
+                        android:hint="order detail"
+                        android:inputType="textMultiLine"
+                        android:lines="5"
+                        android:maxLines="10"
+                        android:minHeight="100dp"
+                        android:minLines="4"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+                <!--end order detail-->
+            </LinearLayout>
+
+            <!--customer's payment method radio group-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/preferred_payment_textview"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Customer's method of payment:" />
+
+                <RadioGroup
+                    android:id="@+id/preferred_payment_radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <!--customer radio buttons-->
+                    <RadioButton
+                        android:id="@+id/cash_payment_radioButton"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Cash"
+                        android:textColor="@color/colorTitleText"
+                        android:textStyle="bold" />
+
+                    <!--restaurant radio buttons-->
+                    <RadioButton
+                        android:id="@+id/card_payment_radioButton"
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:text="Debit/Visa"
+                        android:textColor="@color/colorTitleText"
+                        android:textStyle="bold" />
+                </RadioGroup>
+            </LinearLayout>
+
+
+            <!--submit button-->
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/restaurant_order_submit"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="restaurant_order_click"
+                    android:text=" Request Driver " />
+            </LinearLayout>-->
+            <!--end submit button-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
